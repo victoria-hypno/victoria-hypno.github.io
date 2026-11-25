@@ -441,3 +441,13 @@ body.qz-lock{overflow:hidden}
 @media(max-width:700px){.s-arr{display:none}.pstrip img{height:340px}}
 /* история по центру на планшете и телефоне */
 @media(max-width:860px){.why{text-align:center;justify-items:center}.why img{margin-inline:auto}.why .quote2{text-align:center!important}.why .btn{margin-inline:auto}}
+
+/* отзывы лентой */
+.rstrip{align-items:stretch}
+.rcard{flex:none;width:clamp(280px,30vw,360px);margin:0;background:var(--paper);border-radius:24px;padding:28px 28px 26px;scroll-snap-align:start;display:flex;flex-direction:column}
+.rcard::before{content:"“";display:block;font-family:Prata,Georgia,serif;font-size:64px;line-height:.7;color:var(--acc);height:30px}
+.rtag{order:-1;align-self:flex-start;font:500 10px Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#6f7556;border:1px solid #c9cbb6;border-radius:99px;padding:6px 11px;margin-bottom:16px}
+.rcard blockquote{margin:0 0 18px;font-size:15px;line-height:1.6;flex:1}
+.rcard figcaption{font-family:Prata,Georgia,serif;font-size:18px}
+#reviews .s-arr{top:55%}
+#reviews .note{max-width:none}
