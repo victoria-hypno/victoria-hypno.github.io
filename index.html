@@ -7,7 +7,7 @@
 <meta name="description" content="Виктория Холмс, гипнотерапевт. Групповая онлайн-сессия «Любовь к себе» 12 декабря в 14:00 по Москве.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prata&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
@@ -155,7 +155,16 @@
 <!-- 11. Отзывы -->
 <section class="band" id="reviews">
   <div class="wrap">
-    <div class="center"><span class="kicker">Отзывы</span><h2>Что говорят клиенты</h2><p class="lead">Групповые и индивидуальные сессии, аудиозаписи и обучение. Листайте вбок</p></div>
+    <div class="center"><span class="kicker">Отзывы</span><h2>Что говорят клиенты</h2><p class="lead">Включите звук на видео, перевод уже в субтитрах</p></div>
+    <h3 class="vtitle">Видеоотзывы</h3>
+    <div class="strip-wrap"><button type="button" class="s-arr s-prev" aria-label="Назад">←</button><div class="pstrip vstrip">
+      <div class="vcard"><video muted loop playsinline preload="none" poster="v_samantha_poster.jpg"><source src="v_samantha.mp4" type="video/mp4"></video><button type="button" class="vsound" aria-label="Включить звук">🔇</button><div class="vcap"><b>Саманта</b><span>индивидуальная сессия</span></div></div>
+      <div class="vcard"><video muted loop playsinline preload="none" poster="v_katya_poster.jpg"><source src="v_katya.mp4" type="video/mp4"></video><button type="button" class="vsound" aria-label="Включить звук">🔇</button><div class="vcap"><b>Катя</b><span>групповая сессия</span></div></div>
+      <div class="vcard"><video muted loop playsinline preload="none" poster="v_irena_poster.jpg"><source src="v_irena.mp4" type="video/mp4"></video><button type="button" class="vsound" aria-label="Включить звук">🔇</button><div class="vcap"><b>Ирена</b><span>«Любовь к себе»</span></div></div>
+      <div class="vcard"><video muted loop playsinline preload="none" poster="v_axel_poster.jpg"><source src="v_axel.mp4" type="video/mp4"></video><button type="button" class="vsound" aria-label="Включить звук">🔇</button><div class="vcap"><b>Аксель Шура</b><span>блогер, клиент несколько лет</span></div></div>
+      <div class="vcard"><video muted loop playsinline preload="none" poster="v_cristina_poster.jpg"><source src="v_cristina.mp4" type="video/mp4"></video><button type="button" class="vsound" aria-label="Включить звук">🔇</button><div class="vcap"><b>Кристина</b><span>«Любовь к себе»</span></div></div>
+    </div><button type="button" class="s-arr s-next" aria-label="Дальше">→</button></div>
+    <h3 class="vtitle">Отзывы в переписке</h3>
     <div class="strip-wrap"><button type="button" class="s-arr s-prev" aria-label="Назад">←</button><div class="pstrip rstrip">
       <figure class="rcard"><span class="rtag">Групповая сессия «Любовь к себе»</span><blockquote>Виктория, я просто хотела сказать: после вашей групповой сессии меня пригласил на ужин мужчина! Не могу поверить, как быстро что-то изменилось.</blockquote><figcaption>Джоан</figcaption></figure>
       <figure class="rcard"><span class="rtag">Групповая сессия «Любовь к себе»</span><blockquote>После нашей сессии я поняла, что больше 20 лет чувствовала себя недостойной и оставалась в отношениях, где меня не любили. Через год я встретила мужчину, который ощущается как родная душа. У нас те отношения, которых я никогда не считала себя достойной.</blockquote><figcaption>Мишель</figcaption></figure>
@@ -439,5 +448,6 @@
 }
 </script>
 <script>document.querySelectorAll(".strip-wrap").forEach(w=>{const s=w.querySelector(".pstrip");const go=d=>s.scrollBy({left:d*s.clientWidth*.8,behavior:"smooth"});w.querySelector(".s-prev").onclick=()=>go(-1);w.querySelector(".s-next").onclick=()=>go(1)});</script>
+<script>{const vs=[...document.querySelectorAll(".vcard video")];const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting&&e.intersectionRatio>.6){v.play().catch(()=>{})}else{v.pause()}}),{threshold:[0,.6]});vs.forEach(v=>io.observe(v));document.querySelectorAll(".vsound").forEach(b=>b.addEventListener("click",()=>{const v=b.parentElement.querySelector("video");const on=v.muted;vs.forEach(x=>{x.muted=true});document.querySelectorAll(".vsound").forEach(x=>x.textContent="🔇");v.muted=!on;b.textContent=on?"🔊":"🔇";if(on){v.currentTime=0;v.play()}}))}</script>
 </body>
 </html>
