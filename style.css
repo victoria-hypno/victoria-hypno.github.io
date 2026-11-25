@@ -429,3 +429,15 @@ body.qz-lock{overflow:hidden}
 @media(min-width:1101px){.full:has(.hnav){padding-top:130px}}
 .thought{transition:opacity .6s,filter .6s,transform .6s,background .3s}
 .flip .f{border:1.5px solid #6f7556}.flip:hover .f{border-color:var(--olive)}.flip .f::after{color:#6f7556}
+/* видео в первом экране */
+.full>video.hero-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+/* фото лентой слева направо */
+.strip-wrap{position:relative;margin-top:40px}
+.pstrip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding-bottom:6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.pstrip::-webkit-scrollbar{display:none}
+.pstrip img{flex:none;height:clamp(300px,42vw,460px);width:auto;aspect-ratio:3/4;object-fit:cover;border-radius:20px;scroll-snap-align:start}
+.s-arr{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:48px;height:48px;border-radius:50%;border:0;background:rgba(244,240,232,.92);color:var(--olive);font-size:20px;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.s-prev{left:-8px}.s-next{right:-8px}
+@media(max-width:700px){.s-arr{display:none}.pstrip img{height:340px}}
+/* история по центру на планшете и телефоне */
+@media(max-width:860px){.why{text-align:center;justify-items:center}.why img{margin-inline:auto}.why .quote2{text-align:center!important}.why .btn{margin-inline:auto}}
