@@ -325,7 +325,7 @@ footer{padding:40px max(5vw,18px);display:flex;flex-wrap:wrap;justify-content:sp
 .r-top{position:absolute;top:52px;left:30px;z-index:2;font-weight:500;font-size:15px;color:#fff;pointer-events:none}
 .r-ui{position:absolute;left:16px;right:60px;bottom:22px;z-index:2;color:#fff}
 .r-user{display:flex;align-items:center;gap:8px;font-size:13px}
-.r-ava{width:28px;height:28px;border-radius:50%;background:url(photos/portrait.jpg) center/cover;border:1.5px solid #fff}
+.r-ava{width:28px;height:28px;border-radius:50%;background:url(portrait.jpg) center/cover;border:1.5px solid #fff}
 .r-ui p{font-size:13px;margin:8px 0 0;line-height:1.4}
 .r-side{position:absolute;right:12px;bottom:30px;z-index:2;display:flex;flex-direction:column;gap:18px;font-size:22px;color:#fff;text-align:center}
 @media(max-width:760px){.reels-wrap{grid-template-columns:minmax(0,1fr)}.r-btns{display:none}}
